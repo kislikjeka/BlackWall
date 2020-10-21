@@ -11,6 +11,12 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Класс-контроллер для работы с игрой
+ *
+ * Class GameController
+ * @package App\Http\Controllers
+ */
 class GameController extends Controller
 {
     /** @var GameService */
@@ -40,6 +46,7 @@ class GameController extends Controller
 
     /**
      * Проверяет решение
+     * @param Request $request
      * @param $gameId
      * @return JsonResponse
      */
