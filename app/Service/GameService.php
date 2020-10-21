@@ -109,13 +109,13 @@ class GameService
             $this->doMove($field, $step['move'], $step['index']);
         }
         if ($this->checkIsSolved($field)){
-            $game->is_complited = true;
+            $game->is_completed = true;
             $game->completed_at = Carbon::now();
         }
 
         $game->save();
 
-        return $game->is_complited;
+        return $game->is_completed;
     }
 
     /**
@@ -141,6 +141,6 @@ class GameService
      */
     private function checkIsSolved(Collection $field): bool
     {
-        return ;
+        return true;
     }
 }

@@ -15,7 +15,7 @@ use Illuminate\Database\Query\Builder;
  *
  * @property string $game_state
  * @property int $user_id
- * @property boolean $is_complited
+ * @property boolean $is_completed
  *
  * @property Carbon $created_at
  * @property Carbon $completed_at
@@ -29,6 +29,8 @@ class Game extends Model
         'created_at' => 'datetime',
         'completed_at' => 'datetime',
     ];
+
+    protected $table = 'game';
 
     /**
      * Описывает связь игры с пользователем
