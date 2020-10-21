@@ -20,6 +20,8 @@ class CreateGameTable extends Migration
             $table->boolean('is_completed')->default(false);
             $table->timestamps();
             $table->timestamp('completed_at')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

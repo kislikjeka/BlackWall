@@ -17,13 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5eba2560-0182-4235-b715-bcb15bee71d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Service/GameService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/GameService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_21_172130_create_game_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_172130_create_game_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +151,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -188,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603300488578</updated>
       <workItem from="1603300489695" duration="1197000" />
-      <workItem from="1603301720005" duration="9272000" />
+      <workItem from="1603301720005" duration="10107000" />
     </task>
     <task id="LOCAL-00001" summary="Create game service">
       <created>1603310294091</created>
@@ -197,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603310294091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix solveGame method with Id">
+      <created>1603311597288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603311597288</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,18 +228,39 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Create game service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create game service" />
+    <MESSAGE value="Fix solveGame method with Id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix solveGame method with Id" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603312491263">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1603312491263" />
     <state x="443" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1603305898042">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="443" y="100" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1603305898042" />
-    <state x="181" y="23" key="CommitChangelistDialog2" timestamp="1603310293773">
+    <state x="181" y="23" key="CommitChangelistDialog2" timestamp="1603311597045">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="181" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1603310293773" />
+    <state x="181" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1603311597045" />
+    <state width="846" height="198" key="GridCell.Tab.0.bottom" timestamp="1603312531318">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="846" height="198" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1603312531318" />
+    <state width="846" height="198" key="GridCell.Tab.0.center" timestamp="1603312531317">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="846" height="198" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1603312531317" />
+    <state width="846" height="198" key="GridCell.Tab.0.left" timestamp="1603312531316">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="846" height="198" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1603312531316" />
+    <state width="846" height="198" key="GridCell.Tab.0.right" timestamp="1603312531317">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="846" height="198" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1603312531317" />
     <state x="292" y="144" key="NewPhpClassDialog" timestamp="1603302830415">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -248,5 +273,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="341" y="166" width="598" height="490" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1603311133499" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1603311627758">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1603311627758" />
   </component>
 </project>
