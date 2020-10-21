@@ -15,12 +15,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eba2560-0182-4235-b715-bcb15bee71d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/120274b0-633f-4cbb-96f5-4c496ec56938.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/120274b0-633f-4cbb-96f5-4c496ec56938.xml" afterDir="false" />
+    <list default="true" id="5eba2560-0182-4235-b715-bcb15bee71d9" name="Default Changelist" comment="remove auth for testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Service/GameService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/GameService.php" afterDir="false" />
     </list>
@@ -204,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603300488578</updated>
       <workItem from="1603300489695" duration="1197000" />
-      <workItem from="1603301720005" duration="12148000" />
+      <workItem from="1603301720005" duration="13430000" />
     </task>
     <task id="LOCAL-00001" summary="Create game service">
       <created>1603310294091</created>
@@ -241,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603313787705</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove auth for testing">
+      <created>1603315086498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603315086498</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +274,8 @@
     <MESSAGE value="Fix solveGame method with Id" />
     <MESSAGE value="Add gameService and change routes" />
     <MESSAGE value="Install JetSteam for auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Install JetSteam for auth" />
+    <MESSAGE value="remove auth for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove auth for testing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -287,10 +291,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.777@0.23.1280.777" timestamp="1603314673746" />
-    <state x="181" y="23" width="945" height="777" key="CommitChangelistDialog2" timestamp="1603313787014">
+    <state x="181" y="23" width="945" height="777" key="CommitChangelistDialog2" timestamp="1603316062649">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="181" y="23" width="945" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1603313787014" />
+    <state x="181" y="23" width="945" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1603316062649" />
     <state x="100" y="123" width="1080" height="577" key="DiffContextDialog" timestamp="1603314675555">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -323,9 +327,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="341" y="166" width="598" height="490" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1603314952201" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1603314626090">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1603315096830">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1603314626090" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1603315096830" />
   </component>
 </project>

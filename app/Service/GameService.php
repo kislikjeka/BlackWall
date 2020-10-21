@@ -22,6 +22,9 @@ class GameService
         'right' => +1
     ];
 
+    /** @var int - Размер поля */
+    const FIELD_SIZE = 16;
+
     /**
      * Создает игру
      *
@@ -60,7 +63,7 @@ class GameService
 
             return collect($array_state);
         } else {
-            $array_state = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+            $array_state = range(1, self::FIELD_SIZE - 1);
             $field = collect($array_state);
             do {
                 $field = $field->shuffle();
@@ -108,9 +111,10 @@ class GameService
         foreach ($steps as $step) {
             $this->doMove($field, $step['move'], $step['index']);
         }
-        if ($this->checkIsSolved($field)){
+        if ($this->checkIsSolved($field)) {
             $game->is_completed = true;
             $game->completed_at = Carbon::now();
+            $game->game_state = $field->implode(',');
         }
 
         $game->save();
@@ -141,6 +145,12 @@ class GameService
      */
     private function checkIsSolved(Collection $field): bool
     {
+        for ($i = 1; $i < self::FIELD_SIZE - 1; $i++) {
+            if ($field[$i] < $field[$i - 1]){
+                return false;
+            }
+        }
+
         return true;
     }
 }
