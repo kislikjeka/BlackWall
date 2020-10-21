@@ -40,17 +40,12 @@ class GameController extends Controller
 
     /**
      * Проверяет решение
-     * @param Request $request
+     * @param $gameId
      * @return JsonResponse
      */
-    public function solveGame(Request $request): JsonResponse
+    public function solveGame(Request $request, $gameId): JsonResponse
     {
-        /** @var User $user */
-        $user = Auth::user();
-        /** @var Game $game */
-        $game = $user->notCompletedGames()->first();
-        $is_win = $this->gameService->solve($game, $request->steps);
-
-        return response()->json(['is_win' => $is_win]);
+        $game = Game::find($gameId);
+        return response()->json(['is_win' => $this->gameService->solveGame($game, $request->steps)]);
     }
 }

@@ -49,11 +49,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Связь со всеми играми
+     *
+     * @return HasMany
+     */
     public function games(): HasMany
     {
         return $this->hasMany(Game::class);
     }
 
+    /**
+     * Связь со всеми незаконченными играми
+     *
+     * @return HasMany
+     */
     public function notCompletedGames(): HasMany
     {
         return $this->games()->where('is_completed', 0);

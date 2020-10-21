@@ -40,6 +40,7 @@ class GameService
         $field = $this->createGameField($game_state);
         $game = new Game();
         $game->game_state = $field->implode(',');
+        $game->updateTimestamps();
         $game->user()->associate($user);
         $game->save();
 
@@ -99,9 +100,9 @@ class GameService
      *
      * @param Game $game
      * @param array $steps
-     * @return Game
+     * @return bool
      */
-    public function solve(Game $game, array $steps): bool
+    public function solveGame(Game $game, array $steps): bool
     {
         $field = $this->createGameField($game->game_state);
         foreach ($steps as $step) {
@@ -140,6 +141,6 @@ class GameService
      */
     private function checkIsSolved(Collection $field): bool
     {
-        return true;
+        return ;
     }
 }

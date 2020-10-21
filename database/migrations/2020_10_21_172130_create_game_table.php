@@ -16,10 +16,10 @@ class CreateGameTable extends Migration
         Schema::create('game', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->json('game_state');
-            $table->boolean('is_completed');
+            $table->string('game_state');
+            $table->boolean('is_completed')->default(false);
             $table->timestamps();
-            $table->timestamp('completed_at');
+            $table->timestamp('completed_at')->nullable();
         });
     }
 
