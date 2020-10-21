@@ -17,7 +17,9 @@ class CreateGameTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->json('game_state');
+            $table->boolean('is_completed');
             $table->timestamps();
+            $table->timestamp('completed_at');
         });
     }
 

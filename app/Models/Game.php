@@ -4,6 +4,7 @@
 namespace App\Models;
 
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Query\Builder;
@@ -12,12 +13,21 @@ use Illuminate\Database\Query\Builder;
  * Class Game
  * @package App\Models
  *
- * @property array $game_state
+ * @property string $game_state
+ * @property int $user_id
+ * @property boolean $is_complited
+ *
+ * @property Carbon $created_at
+ * @property Carbon $completed_at
+ *
+ * @method static Builder notCompletedByUserId(int $userId)
  */
 class Game extends Model
 {
     protected $casts = [
-       'game_state' => 'array'
+        'is_completed' => 'bool',
+        'created_at' => 'datetime',
+        'completed_at' => 'datetime',
     ];
 
     /**
@@ -37,8 +47,8 @@ class Game extends Model
      * @param int $userId
      * @return Builder
      */
-    public function scopeByUser(Builder $query, int $userId): Builder
+    public function scopeNotCompletedByUserId(Builder $query, int $userId): Builder
     {
-        return $query->where('user_id', $userId);
+        return $query->where('user_id', $userId)->where('is_completed', 0);
     }
 }
