@@ -45,7 +45,18 @@ class GameController extends Controller
      */
     public function solveGame(Request $request, $gameId): JsonResponse
     {
+        /** @var Game $game */
         $game = Game::find($gameId);
+        if ($game === null){
+            return response()->json(['message' => "Игра не найдена"], 400);
+        }
+
+        /** @var User $user */
+        $user = Auth::user();
+
+        if($user->id !== $game->user_id) {
+            return response()->json(['message' => "Игра другого пользователя"], 403);
+        }
         return response()->json(['is_win' => $this->gameService->solveGame($game, $request->steps)]);
     }
 }
